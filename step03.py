@@ -10,8 +10,8 @@ titles_df = titles_df.filter(F.col("_c0").cast("int").isNull()).show(truncate=Tr
 
 """
 ISSUES:
-    1)Comment rows - These begin with a # character in the first column, and all other columns are null
-    2)Missing first column - We have few rows that reference TV Show or Movie, which should be the 2nd column.
-    3)Odd columns - There are a few rows included where the columns seem out of sync
+    4)Comment rows - These begin with a # character in the first column, and all other columns are null
+    5)Missing first column - We have few rows that reference TV Show or Movie, which should be the 2nd column.
+    6)Odd columns - There are a few rows included where the columns seem out of sync
     (ie, a content type in the ID field, dates in the wrong column, etc).
 """
