@@ -23,6 +23,12 @@ titles_single_df.select("fieldcount", "_c0").where("fieldcount > 12").show(
     truncate=False
 )
 
+"""
+ISSUE:
+    7) Columns present do not match the expected schema
+
+"""
+
 # filter out rows that have less than 12 columns
 titles_single_df.select("fieldcount", "_c0").where("fieldcount < 12").show(
     truncate=False
