@@ -93,3 +93,6 @@ titles_clean_df.select("type").distinct().show()
 |  Movie|
 +-------+
 """
+
+# verify that the row count is still 6113
+print(titles_clean_df.count())  # 6113
