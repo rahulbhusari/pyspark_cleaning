@@ -16,33 +16,25 @@ formatted_date_df = cleaned_titles_df.withColumn(
 # remove titles with null date values
 clean_titles_df = formatted_date_df.filter(formatted_date_df.formatted_date != "null")
 
+# replace the old date column with new one while keeping the name intact
+clean_titles_df = clean_titles_df.drop("date_added").withColumnRenamed(
+    "formatted_date", "date_added"
+)
 
-clean_titles_df = clean_titles_df.withColumn("show_time", F.split("duration", " ")[0])
-
-
-clean_titles_df.select("duration", "show_time").where(
-    "duration LIKE '%Season%'"
-).distinct().show(truncate=False)
+clean_titles_df.printSchema()
 
 """
-+----------+---------+
-|duration  |show_time|
-+----------+---------+
-|14 Seasons|14       |
-|12 Seasons|12       |
-|8 Seasons |8        |
-|3 Seasons |3        |
-|1 Season  |1        |
-|2 Seasons |2        |
-|13 Seasons|13       |
-|11 Seasons|11       |
-|5 Seasons |5        |
-|9 Seasons |9        |
-|7 Seasons |7        |
-|4 Seasons |4        |
-|6 Seasons |6        |
-|15 Seasons|15       |
-|10 Seasons|10       |
-+----------+---------+
+ |-- show_id: string (nullable = true)
+ |-- title: string (nullable = true)
+ |-- director: string (nullable = true)
+ |-- cast: string (nullable = true)
+ |-- country: string (nullable = true)
+ |-- release_year: string (nullable = true)
+ |-- rating: string (nullable = true)
+ |-- duration: string (nullable = true)
+ |-- listed_in: string (nullable = true)
+ |-- description: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- date_added: string (nullable = true)
 
 """
