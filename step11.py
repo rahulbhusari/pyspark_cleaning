@@ -73,4 +73,4 @@ titles_clean_df.select(titles_clean_df.type).distinct().show()
 """
 
 # isolate empty "" values in the type column
-titles_clean_df.where(titles_clean_df.title == "").show()
+titles_clean_df.where(titles_clean_df.type == "").show()
