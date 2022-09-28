@@ -50,6 +50,7 @@ clean_titles_df = clean_titles_df.withColumn(
 clean_titles_df = clean_titles_df.drop("date_added").withColumnRenamed(
     "date_added_temp", "date_added"
 )
+clean_titles_df.select("date_added").show(20, truncate=False)
 
 # print schema
 clean_titles_df.printSchema()

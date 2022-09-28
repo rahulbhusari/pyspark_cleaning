@@ -1,4 +1,3 @@
-from tkinter.tix import Tree
 from pyspark.sql import SparkSession
 from pyspark.sql.types import (
     StructField,

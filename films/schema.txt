@@ -1,0 +1,12 @@
+FILM
+"id","title","release_year","country","duration","language","certification","gross","budget"
+
+REVIEWS
+
+id,film_id,num_user,num_critic,imdb_score,num_votes,facebook_likes
+
+PEOPLE
+id,name,birthdate,deathdate
+
+ROLES
+id,film_id,person_id,role
