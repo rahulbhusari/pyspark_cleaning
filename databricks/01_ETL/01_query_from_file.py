@@ -22,6 +22,3 @@ spark.sql("SELECT COUNT(*) rows FROM events_view").show()
 +----+
 
 """
-
-mldf = spark.read.option("multiline", "true").json("databricks/data/kafka-events.json")
-mldf.printSchema()
