@@ -2,7 +2,7 @@ import csv
 import json
 
 # OPTIONAL determine the number of indentation for visual representation of json data
-indent_count = 2
+indent_count = 0
 
 
 def convert_to_json(csv_path, json_path):

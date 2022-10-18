@@ -1,0 +1,13 @@
+item_id,name,price
+M_PREM_Q,Premium Queen Mattress,1795
+M_STAN_F,Standard Full Mattress,945
+M_PREM_F,Premium Full Mattress,1695
+M_PREM_T,Premium Twin Mattress,1095
+M_PREM_K,Premium King Mattress,1995
+P_DOWN_S,Standard Down Pillow,119
+M_STAN_Q,Standard Queen Mattress,1045
+M_STAN_K,Standard King Mattress,1195
+M_STAN_T,Standard Twin Mattress,595
+P_FOAM_S,Standard Foam Pillow,59
+P_FOAM_K,King Foam Pillow,79
+P_DOWN_K,King Down Pillow,159
