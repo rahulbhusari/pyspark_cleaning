@@ -74,3 +74,26 @@ FROM sales
 |           g|
 +------------+
 """
+
+# using Decorator Syntax
+@udf("string")
+def extract_domain(email: str) -> str:
+    """Returns the domain between @ and . values i.e. infosys/gmail/yahoo etc
+    Using optioanl 'Python type hints' syntax input_type -> output_type
+    """
+    return email[email.index("@") + 1 : email.index(".")]
+
+
+salesDF.select(extract_domain(col("email")).alias("email_domain")).show(5)
+
+"""
++----------------+
+|    email_domain|
++----------------+
+|gonzales-miranda|
+| phillips-duarte|
+|           meyer|
+|          brooks|
+|       mcpherson|
++----------------+
+"""
