@@ -2,7 +2,7 @@ import csv
 import json
 
 # OPTIONAL determine the number of indentation for visual representation of json data
-indent_count = 4
+indent_count = 2
 
 
 def convert_to_json(csv_path, json_path):
@@ -22,11 +22,9 @@ def convert_to_json(csv_path, json_path):
 
 
 # set the file paths
-csv_file_path = (
-    r"/Users/benkaan/Desktop/data-sparkling/databricks/data/kafka-events.csv"
-)
+csv_file_path = r"/Users/benkaan/Desktop/data-sparkling/databricks/data/events-raw.csv"
 json_file_path = (
-    r"/Users/benkaan/Desktop/data-sparkling/databricks/data/kafka-events.json"
+    r"/Users/benkaan/Desktop/data-sparkling/databricks/data/events-raw.json"
 )
 
 convert_to_json(csv_file_path, json_file_path)
