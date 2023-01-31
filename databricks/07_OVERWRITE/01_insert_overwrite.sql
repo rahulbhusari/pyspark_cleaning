@@ -1,5 +1,0 @@
-/*
-INSERT OVERWRITE automatically replaces all of the data in a table.
-Faster because it does not need to list the directory recursively or delete any files.
-
-*/
