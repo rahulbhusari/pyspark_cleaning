@@ -23,7 +23,7 @@ To create a free community-edition Databricks account, please follow this [link]
 
 
 ## Contributions
-
+This repository is a part of my continuous learning journey, which has been inspired by the valuable contributions made by various members of the open source community.
 Contributions to this repository are welcome. If you have a new data cleaning project that you would like to add, please create a new folder with a README file and Jupyter notebook, and submit a pull request.
 
 ## Disclaimer
